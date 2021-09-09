@@ -3,9 +3,10 @@
 #include<math.h>
 #include<windows.h>
 #include<stdlib.h>
-char square[10] = {"o","1","2","3","4","5","6","7","8","9"};
+char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
 int checkWin();
 void drawBoard();
+/* Main function */
 int main()
 {
     int player = 1,i,choice;
@@ -35,6 +36,7 @@ int main()
     getch();
     return 0;
 }
+/* the method used to check whether the person is won or not*/
 int checkWin(){
     if(square[1]== square[2] == square[3])
         return 1;
@@ -57,6 +59,7 @@ int checkWin(){
     else 
         return -1;
 }
+/* to draw a board to display*/
 void drawBoard() {
     printf("Tic Tac Toe Game");
     printf("    |   |   \n");
